@@ -13,15 +13,15 @@ object D4Q3{
     }
 
     def main(args: Array[String]): Unit = {
-        println(formatNames("Simon")(toUpper));
+        println(formatNames("Benny")(toUpper));
         
-        println(formatNames("Johnnie")(name => {
+        println(formatNames("Niroshan")(name => {
             name.substring(0, 2).toUpperCase + name.substring(2);
             })
         );
-        println(formatNames("John")(toLower));
+        println(formatNames("Saman")(toLower));
         
-        println(formatNames("Eskiel")(name => {
+        println(formatNames("Kumara")(name => {
             name.substring(0, 1).toUpperCase + name.substring(1, 5) + name.substring(5).toUpperCase;
         })
         );
