@@ -1,11 +1,27 @@
 object D4Q3{
     
     def toUpper(name: String): String = {
-        return name.toUpperCase
+        var uName:String = "";
+        for(i <- 0 until name.length){
+            if(name(i) >= 'a' && name(i) <= 'z'){
+                uName+= (name(i).toInt - 32).toChar;
+            }else{
+                uName+= name(i);
+            }
+        }
+        return uName;
     }
 
     def toLower(name: String): String = {
-        return name.toLowerCase
+        var lName:String = "";
+        for(i <- 0 until name.length){
+            if(name(i) >= 'A' && name(i) <= 'Z'){
+                lName += (name(i).toInt + 32).toChar;
+            }else{
+                lName += name(i);
+            }
+        }
+        return lName;
     }
 
     def formatNames(name: String)(format: String => String): String = {
