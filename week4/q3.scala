@@ -24,6 +24,7 @@ object D4Q3{
         return lName;
     }
 
+    // Formating function
     def formatNames(name: String)(format: String => String): String = {
         format(name)
     }
@@ -32,10 +33,10 @@ object D4Q3{
         println(formatNames("Benny")(toUpper));
         
         println(formatNames("Niroshan")(name => {
-            name.substring(0, 2).toUpperCase + name.substring(2);
+            name.substring(0, 4).toUpperCase + name.substring(4);
             })
         );
-        println(formatNames("Saman")(toLower));
+        println(formatNames("Saman")(toUpper));
         
         println(formatNames("Kumara")(name => {
             name.substring(0, 1).toUpperCase + name.substring(1, 5) + name.substring(5).toUpperCase;

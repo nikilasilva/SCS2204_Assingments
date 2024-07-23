@@ -45,12 +45,12 @@ object retailStore {
 
     def main(args: Array[String]): Unit = {
         println("Current Inventory\n");
+        // displayInventory();
+        restockItem("Sugar", 10);
+        // println("\nInventory after add 10 biscuits");
         displayInventory();
-        restockItem("Biscuit", 10);
-        println("\nInventory after add 10 biscuits");
-        displayInventory();
-        sellItem("Biscuit", 4);
-        println("\nAfter selling 4 biscuits");
-        displayInventory();
+        // sellItem("Biscuit", 4);
+        // println("\nAfter selling 4 biscuits");
+        // displayInventory();
     }
 }
