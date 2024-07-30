@@ -35,7 +35,7 @@ object D5Q2 {
     }
 
     def displayLibrary() : Unit = {
-        println("Books in the library");
+        println("\nBooks in the library");
         library.foreach(book => println("Title : " + book.title + ", Author : " + book.author + ", ISBN : " + book.ISBN));
     }
 
