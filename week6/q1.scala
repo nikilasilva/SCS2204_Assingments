@@ -15,22 +15,22 @@ object D6Q1 {
     104 -> Product(104, "Product D", 7, 18.0)
   )
 
-  // I. Retrieve all product names from inventory1
+  // Retrieve all product names from inventory1
   def getProductNames(inventory: Map[Int, Product]): List[String] = {
     inventory.values.map(_.name).toList
   }
 
-  // II. Calculate the total value of all products in inventory1
+  // Calculate the total value of all products in inventory1
   def getTotalValue(inventory: Map[Int, Product]): Double = {
     inventory.values.map(product => product.quantity * product.price).sum
   }
 
-  // III. Check if inventory1 is empty
+  // Check if inventory1 is empty
   def isInventoryEmpty(inventory: Map[Int, Product]): Boolean = {
     inventory.isEmpty
   }
 
-  // IV. Merge inventory1 and inventory2, updating quantities and retaining the highest price
+  // Merge inventory1 and inventory2, updating quantities and retaining the highest price
   def mergeInventories(inventory1: Map[Int, Product], inventory2: Map[Int, Product]): Map[Int, Product] = {
     inventory2.foldLeft(inventory1) { case (acc, (id, product)) =>
       acc.get(id) match {
@@ -46,7 +46,7 @@ object D6Q1 {
     }
   }
 
-  // V. Check if a product with a specific ID exists and print its details
+  // Check if a product with a specific ID exists and print its details
   def checkAndPrintProductDetails(inventory: Map[Int, Product], id: Int): Unit = {
     inventory.get(id) match {
       case Some(product) => println(s"Product details: $product")
@@ -55,20 +55,20 @@ object D6Q1 {
   }
 
   def main(args: Array[String]): Unit = {
-    // I. Retrieve all product names from inventory1
+    // Retrieve all product names from inventory1
     println("Product Names: " + getProductNames(inventory1))
 
-    // II. Calculate the total value of all products in inventory1
+    // Calculate the total value of all products in inventory1
     println("Total Value: " + getTotalValue(inventory1))
 
-    // III. Check if inventory1 is empty
+    // heck if inventory1 is empty
     println("Is Inventory Empty: " + isInventoryEmpty(inventory1))
 
-    // IV. Merge inventory1 and inventory2
+    // Merge inventory1 and inventory2
     val mergedInventory = mergeInventories(inventory1, inventory2)
     println("Merged Inventory: " + mergedInventory)
 
-    // V. Check if product with ID 102 exists in inventory1 and print its details
+    // Check if product with ID 102 exists in inventory1 and print its details
     checkAndPrintProductDetails(inventory1, 102)
   }
 }
